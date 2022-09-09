@@ -90,3 +90,17 @@ button:hover {
 #results {
   padding: 2rem 0;
 }
+
+#start-container {
+  display: block;
+  align-items: center;
+}
+
+#start-header {
+  text-align: center;
+  justify-content: center;
+}
+
+#start {
+  padding: 2rem 0;
+}
