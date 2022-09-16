@@ -6,25 +6,28 @@ const quizDataJp = [
     b: 'When The Sun Goes Down',
     c: 'Song 2',
     d: 'Rewind',
+    explanation: 'この問題の解説',
     correct: 'b'
   },
   {
     check: 'G1_kamei',
-    question: '答えはc １年亀井',
+    question: 'この問題の答えはなんでしょう',
     a: 'Take My Hand',
     b: 'When The Sun Goes Down',
     c: 'Song 2',
     d: 'Rewind',
+    explanation: 'この問題の答えはCです',
     correct: 'c'
   },
   {
-    check: 'G3_kamei',
-    question: '第二次世界大戦中に、ドイツ軍に首都を制圧された国は？答えはc ３年亀井',
-    a: '中国',
-    b: 'イギリス',
-    c: 'フランス',
-    d: 'アメリカ',
-    correct: 'c'
+    check: 'G1_kamei',
+    question: '2個目の問題',
+    a: 'Take My Hand',
+    b: 'When The Sun Goes Down',
+    c: 'Song 2',
+    d: 'Rewind',
+    explanation: 'この問題の解説',
+    correct: 'd'
   },
 ];
 

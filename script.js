@@ -1,30 +1,5 @@
 import { quizDataJp } from './quiz_data_jp.js';
 
-// const quizDataJp = [
-//   {
-//     question: '1+1',
-//     a: '1',
-//     b: '2',
-//     c: '3',
-//     d: '4',
-//     correct: 'b'
-//   },{
-//     question: '3+3',
-//     a: '3',
-//     b: '4',
-//     c: '5',
-//     d: '6',
-//     correct: 'd'
-//   },{
-//     question: '9+9',
-//     a: '18',
-//     b: '19',
-//     c: '20',
-//     d: '21',
-//     correct: 'a'
-//   },
-// ];
-
 // 質問文
 const questionElm = document.getElementById('question');
 
@@ -40,7 +15,10 @@ const submitBtn = document.getElementById('submit');
 // 現在の問題
 let currentQuiz = 0;
 
-// 現在のスコア
+// 現在の解答した問題
+let quiz = 0;
+
+// 現在の正解した問題
 let score = 0;
 
 // 次の問題ボタン
@@ -51,6 +29,7 @@ const startQuizBtn = document.getElementById('start-quiz');
 const quizHeaderElm = document.getElementById('quiz-header');
 const resultsConElm = document.getElementById('results-container');
 const resultsElm = document.getElementById('results');
+const explanationElm = document.getElementById('explanation');
 const startConElm = document.getElementById('start-container');
 const startsElm = document.getElementById('start');
 
@@ -65,7 +44,6 @@ function loadQuiz() {
   // 問題を取得
   const currentQuizData = quizDataJp[currentQuiz];
 
-  // if (filename == currentQuizData.check) {
   // 質問文を表示
   questionElm.innerText = currentQuizData.question;
 
@@ -74,10 +52,6 @@ function loadQuiz() {
   b_text.innerText = currentQuizData.b;
   c_text.innerText = currentQuizData.c;
   d_text.innerText = currentQuizData.d;
-  // } else {
-  //   currentQuiz++;
-  //   loadQuiz();
-  // }
 }
 
 function getAnswered() {
@@ -86,35 +60,35 @@ function getAnswered() {
   return document.quizForm.answer.value;
 }
 
-function showResults(results) {
+function showResults(results, ex) {
   quizHeaderElm.style.display = 'none';
   submitBtn.style.display = 'none';
   resultsConElm.style.display = 'block';
+  explanationElm.style.display = 'block';
   startConElm.style.display = 'none';
   startsElm.style.display = 'none';
   resultsElm.innerText = results;
+  explanationElm.innerText = ex;
 }
 
 function showQuiz() {
   quizHeaderElm.style.display = 'block';
   submitBtn.style.display = 'block';
   resultsConElm.style.display = 'none';
+  explanationElm.style.display = 'none';
   startConElm.style.display = 'none';
   startsElm.style.display = 'none';
 }
 
 function checkScore() {
-  if (score == quizDataJp.length) {
-    return '全問正解！おめでとう！';
-  } else {
-    return 'もう一回挑戦しよう！';
-  }
+  return quiz + '問中' + score + '問正解\n何度でも挑戦しよう！'
 }
 
 function startQuiz() {
   quizHeaderElm.style.display = 'none';
   submitBtn.style.display = 'none';
   resultsConElm.style.display = 'none';
+  explanationElm.style.display = 'none';
   startConElm.style.display = 'block';
   startsElm.style.display = 'block';
 }
@@ -131,12 +105,13 @@ submitBtn.addEventListener('click', event => {
 
     // 正誤判定
     if (answer === quizDataJp[currentQuiz].correct) {
-      showResults('正解！');
-
+      showResults('正解！', quizDataJp[currentQuiz].explanation);
+      quiz++;
       score++;
       console.log(score);
     } else {
-      showResults('残念...');
+      showResults('残念...', quizDataJp[currentQuiz].explanation);
+      quiz++;
     }
 
     // ラジオボタンの選択を解除する
@@ -186,5 +161,5 @@ startQuizBtn.addEventListener('click', event => {
     //一致しないとき
   } else {
     nextQuiz();
-  } 
+  }
 });
