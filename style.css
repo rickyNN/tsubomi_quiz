@@ -17,6 +17,8 @@ form {
     text-align: center;
 }
 
-img {
+#image img {
     text-align: center;
+   width: 100%;
+   margin-top: 30px;
 }
