@@ -163,3 +163,7 @@ startQuizBtn.addEventListener('click', event => {
     nextQuiz();
   }
 });
+
+
+
+            
