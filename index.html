@@ -34,106 +34,68 @@
 
         });
     </script>
-    <script type="text/javascript">
-        // ▼HTMLの読み込み直後に実行：
-        document.addEventListener('DOMContentLoaded', function () {
+   <script type="text/javascript">
+    // ▼HTMLの読み込み直後に実行：
+    document.addEventListener('DOMContentLoaded', function () {
 
-            // ▼全てのプルダウンメニューセットごとに処理
-            const mainBoxes = document.getElementsByClassName('pulldownset');
-            for (i = 0; i < mainBoxes.length; i++) {
+       // ▼全てのプルダウンメニューセットごとに処理
+       const mainBoxes = document.getElementsByClassName('pulldownset');
+       for (i = 0; i < mainBoxes.length; i++) {
 
-                const mainSelect = mainBoxes[i].getElementsByClassName("mainselect");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
-                mainSelect[0].onchange = function () {
-                    // ▼同じ親要素に含まれているすべての2階層目(サブ)要素を消す
-                    const subBox = this.parentNode.getElementsByClassName("subbox1");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-                    for (j = 0; j < subBox.length; j++) {
-                        console.log(j);
-                        subBox[j].style.display = 'none';
-                    }
+          const mainSelect = mainBoxes[i].getElementsByClassName("mainselect");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
+          mainSelect[0].onchange = function () {
+             // ▼同じ親要素に含まれているすべての2階層目(サブ)要素を消す
+             const subBox = this.parentNode.getElementsByClassName("subbox1");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
+             for (j = 0; j < subBox.length; j++) {
+                console.log(j);
+                subBox[j].style.display = 'none';
+             }
 
-                    // ▼指定された2階層目(サブ)要素だけを表示する
-                    if (this.value) {
-                        const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                        console.log(this.value);
-                        targetSub.style.display = 'inline';
-                    }
-                }
-            }
-        });
-    </script>
-    <script type="text/javascript">
-        // ▼HTMLの読み込み直後に実行：
-        document.addEventListener('DOMContentLoaded', function () {
+             // ▼指定された2階層目(サブ)要素だけを表示する
+             if (this.value) {
+                const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
+                console.log(this.value);
+                targetSub.style.display = 'inline';
+             }
+             // ▼3階層目の要素を全て非表示にする
+             const allSubBoxes2 = document.getElementsByClassName("subbox2");
+             for (i = 0; i < allSubBoxes2.length; i++) {
+                allSubBoxes2[i].style.display = 'none';
+             }
+          }
 
-            // ▼全てのプルダウンメニューセットごとに処理
-            const mainBoxes2 = document.getElementsByClassName('pulldownset');
-            for (ii = 0; ii < mainBoxes2.length; ii++) {
+       }
+    });
+ </script>
+ <script type="text/javascript">
+    // ▼HTMLの読み込み直後に実行：
+    document.addEventListener('DOMContentLoaded', function () {
 
-                const mainSelect2 = mainBoxes2[ii].getElementsByClassName("subbox1");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
+       // ▼全てのプルダウンメニューセットごとに処理
+       const mainBoxes2 = document.getElementsByClassName('pulldownset');
+       for (ii = 0; ii < mainBoxes2.length; ii++) {
 
-                mainSelect2[0].onchange = function () {
-                    // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
-                    const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-                    for (jj = 0; jj < subBox2.length; jj++) {
-                        console.log(jj);
-                        subBox2[jj].style.display = 'none';
-                    }
+          const mainSelect2 = mainBoxes2[ii].getElementsByClassName("subbox1");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
 
-                    // ▼指定された3階層目(サブ2)要素だけを表示する
-                    if (this.value) {
-                        const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                        console.log(this.value);
-                        targetSub2.style.display = 'inline';
-                    }
-                }
-                mainSelect2[1].onchange = function () {
-                    // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
-                    const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-                    for (jj = 0; jj < subBox2.length; jj++) {
-                        console.log(jj);
-                        subBox2[jj].style.display = 'none';
-                    }
-
-                    // ▼指定された3階層目(サブ2)要素だけを表示する
-                    if (this.value) {
-                        const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                        console.log(this.value);
-                        targetSub2.style.display = 'inline';
-                    }
-                }
-                mainSelect2[2].onchange = function () {
-                    // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
-                    const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-                    for (jj = 0; jj < subBox2.length; jj++) {
-                        console.log(jj);
-                        subBox2[jj].style.display = 'none';
-                    }
-
-                    // ▼指定された3階層目(サブ2)要素だけを表示する
-                    if (this.value) {
-                        const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                        console.log(this.value);
-                        targetSub2.style.display = 'inline';
-                    }
-                }
-                mainSelect2[3].onchange = function () {
-                    // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
-                    const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-                    for (jj = 0; jj < subBox2.length; jj++) {
-                        console.log(jj);
-                        subBox2[jj].style.display = 'none';
-                    }
-
-                    // ▼指定された3階層目(サブ2)要素だけを表示する
-                    if (this.value) {
-                        const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                        console.log(this.value);
-                        targetSub2.style.display = 'inline';
-                    }
+          for (x = 0; x < 3; x++) {
+             mainSelect2[x].onchange = function () {
+                // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
+                const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
+                for (jj = 0; jj < subBox2.length; jj++) {
+                   console.log(jj);
+                   subBox2[jj].style.display = 'none';
                 }
 
-            }
-        });
+                // ▼指定された3階層目(サブ2)要素だけを表示する
+                if (this.value) {
+                   const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
+                   console.log(this.value);
+                   targetSub2.style.display = 'inline';
+                }
+             }
+          }
+       }
+    });
     </script>
 </head>
 
