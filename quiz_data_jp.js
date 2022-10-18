@@ -863,6 +863,157 @@ const quizDataJp = [
     correct: 'c'
   }, 
 
+  // 中１ 龍華 社会
+  {
+    check: 'G1_ryuge_SS', 
+    question: '第１問\nスカンジナビア半島に見られる氷河によって削られた地形を何という？',
+    a: 'リアス海岸',
+    b: 'フィヨルド',
+    c: 'カルデラ',
+    d: 'シラス台地',
+    explanation: 'この問題の解説\n答え：b フィヨルド\naのリアス海岸は\n土地の隆起や沈下によってできた入り組んだ海岸線です！。',
+    correct: 'b'
+  },
+  {
+    check: 'G1_ryuge_SS', 
+    question: '第２問\nイギリスは高緯度のわりに比較的温暖な気候です。この気候を何という？',
+    a: '地中海性気候',
+    b: '熱帯雨林気候',
+    c: '西岸海洋性気候',
+    d: '砂漠気候',
+    explanation: 'この問題の解説\n答え：c 西岸海洋性気候\nイタリアやフランスなどの地中海の近くの国々は、aの地中海性気候です。',
+    correct: 'c'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第３問\n西岸海洋性気候に影響を与えている暖流と風の組み合わせは？',
+    a: '日本海流と季節風',
+    b: '対馬海流と偏西風',
+    c: '北大西洋海流と季節風',
+    d: '北大西洋海流と偏西風',
+    explanation: 'この問題の解説\n答え：d 北大西洋海流と偏西風',
+    correct: 'd'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第４問\n高緯度の北ヨーロッパで、夏に太陽が沈んでも暗くならない現象を何という？',
+    a: '白夜',
+    b: 'シエスタ',
+    c: 'オアシス',
+    d: 'タイガ',
+    explanation: 'この問題の解説\n答え：a 白夜\ndのタイガは針葉樹林帯です！',
+    correct: 'a'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第５問\nヨーロッパは広くキリスト教が信仰されていますが、その中でもドイツやイギリス、スウェーデンで信仰されているキリスト教の宗派を何という？',
+    a: 'プロテスタント',
+    b: 'カトリック',
+    c: '正教会',
+    d: '答えなし',
+    explanation: 'この問題の解説\n答え：a プロテスタント\nbのカトリックはイタリア・フランス・スペインなど、\ncの正教会はロシアやウクライナなどです！',
+    correct: 'a'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第６問\n約２７か国が加盟しているヨーロッパ連合をアルファベットで表すと？',
+    a: 'EC',
+    b: 'EU',
+    c: 'AU',
+    d: 'au',
+    explanation: 'この問題の解説\n答え：b EU\naのECはヨーロッパ共同体！\ncのAUはアフリカ連合！\ndのauは携帯会社ですね！',
+    correct: 'b'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第７問\nヨーロッパ連合（EU)での共通の通貨は？',
+    a: 'ペソ',
+    b: 'ドル',
+    c: 'ポンド',
+    d: 'ユーロ',
+    explanation: 'この問題の解説\n答え：d ユーロ',
+    correct: 'd'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第８問\nアルプス山脈より北側の地域で、家畜のえさにする作物の栽培とブタや牛などの家畜の飼育を組み合わせた農業を何という？',
+    a: '地中海式農業',
+    b: '混合農業',
+    c: '焼畑農業',
+    d: 'プランテーション',
+    explanation: 'この問題の解説\n答え：b 混合農業\ndのプランテーションは、大規模農園のことですね！',
+    correct: 'b'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第９問\nサハラ砂漠より南側の現在砂漠化が進行している地域を何という？',
+    a: 'ステップ',
+    b: 'サバナ',
+    c: 'サヘル',
+    d: 'ケニア',
+    explanation: 'この問題の解説\n答え：c サヘル',
+    correct: 'c'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第１０問\n南アフリカ共和国を中心に採掘されている、スマートフォンの液晶や自動車部品などに使われている稀少金属を何という？',
+    a: 'スライム',
+    b: 'はぐれメタル',
+    c: 'ヘビーメタル',
+    d: 'レアメタル',
+    explanation: 'この問題の解説\n答え：d レアメタル',
+    correct: 'd'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第１１問\nアフリカの多くの国で、特定の農産物や鉱山資源の輸出に頼っている経済のことを何という？',
+    a: 'アフリカ経済',
+    b: 'モノカルチャー経済',
+    c: '計画経済',
+    d: '依存経済',
+    explanation: 'この問題の解説\n答え：b モノカルチャー経済',
+    correct: 'b'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第１２問\n青年海外協力隊や国境なき医師団など、国や政府は関係なく、困っている人たちを助けようとする組織を何という？',
+    a: '非政府組織（NGO）',
+    b: '非営利組織（NPO）',
+    c: 'ボランティア組織',
+    d: '国連平和維持活動（PKO）',
+    explanation: 'この問題の解説\n答え：a 非政府組織（NGO）\nbの非営利組織は、もうけを目的としない組織のことです！',
+    correct: 'a'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第１３問\n北アメリカ大陸の西部に高くそびえる山脈は？',
+    a: 'アルプス山脈',
+    b: 'アパラチア山脈',
+    c: 'アンデス山脈',
+    d: 'ロッキー山脈',
+    explanation: 'この問題の解説\n答え：d ロッキー山脈\naのアルプス山脈は、ヨーロッパ！\nbのアパラチア山脈はアメリカ東部！\ncのアンデス山脈は南アメリカ大陸！',
+    correct: 'd'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第１４問\nアメリカに移住してきた人たちで、スペイン語を話す人々のことを何という？',
+    a: 'ヒスパニック',
+    b: 'メスチーソ',
+    c: '南蛮人',
+    d: 'プロテスタント',
+    explanation: 'この問題の解説\n答え：a ヒスパニック',
+    correct: 'a'
+  },
+  {
+    check: 'G1_ryuge_SS',
+    question: '第１５問\nオーストラリア東部で多く産出される鉱山資源は？',
+    a: '鉄鉱石',
+    b: '石炭',
+    c: 'ボーキサイト',
+    d: '銀',
+    explanation: 'この問題の解説\n答え：b 石炭 ',
+    correct: 'b'
+  },
 
   //// 中１ 大正
 
@@ -3440,7 +3591,7 @@ const quizDataJp = [
   // 中３ 龍華 理科
 
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '酸とアルカリが互いの性質を打ち消しあうような反応を何というか。',
     a: '化学反応',
     b: '吸熱反応',
@@ -3450,7 +3601,7 @@ const quizDataJp = [
     correct: 'c'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: 'すべての中和反応で発生するものにおいて適当でないものは次のうちどれ。',
     a: '塩化ナトリウム',
     b: '塩',
@@ -3460,7 +3611,7 @@ const quizDataJp = [
     correct: 'a'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '次のうち酸性を示す物質はどれ。',
     a: '塩化ナトリウム',
     b: '水酸化ナトリウム',
@@ -3470,7 +3621,7 @@ const quizDataJp = [
     correct: 'd'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '次のうちアルカリ性を示す物質はどれ。',
     a: '塩化ナトリウム',
     b: '水酸化ナトリウム',
@@ -3480,7 +3631,7 @@ const quizDataJp = [
     correct: 'b'
   },
   {
-  check: 'G3_ryuge_E',
+  check: 'G3_ryuge_SI',
   question: '次のうち、酸性を示すイオンはどれ。',
   a: '水素イオン',
   b: '水酸化物イオン',
@@ -3490,7 +3641,7 @@ const quizDataJp = [
   correct: 'a'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '次のうちアルカリ性を示すイオンはどれ。',
     a: '水素イオン',
     b: '水酸化物イオン',
@@ -3500,7 +3651,7 @@ const quizDataJp = [
     correct: 'b'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '中性を示すpHは次のうちどれ。',
     a: '0',
     b: '6',
@@ -3510,7 +3661,7 @@ const quizDataJp = [
     correct: 'c'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: 'BTB溶液に塩酸を滴下したとき、溶液は何色になるか。',
     a: '青色',
     b: '黄色',
@@ -3520,7 +3671,7 @@ const quizDataJp = [
     correct: 'b'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '塩化銅水溶液を電気分解するとき、陽極のほうへ移動するイオンはどれ。',
     a: '銅イオン',
     b: '塩化物イオン',
@@ -3530,7 +3681,7 @@ const quizDataJp = [
     correct: 'b'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '塩酸と水酸化ナトリウム水溶液の中和でできる塩はどれ。',
     a: '硫酸バリウム',
     b: '水',
@@ -3540,7 +3691,7 @@ const quizDataJp = [
     correct: 'd'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '次のうち、一次電池はどれ。',
     a: 'ニッケル水素電池',
     b: 'リチウムイオン電池',
@@ -3550,7 +3701,7 @@ const quizDataJp = [
     correct: 'd'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: 'ある濃度のうすい塩酸15cm³に、ある濃度のうすい水酸化ナトリウム水溶液10cm³を加えると、過不足なく反応し中性となった。この塩酸が10cm3あるとき、水酸化ナトリウム水溶液は何cm3で中性になるか。',
     a: '6cm³',
     b: '8cm³',
@@ -3560,7 +3711,7 @@ const quizDataJp = [
     correct: 'a'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '天体が、中心を通る軸を中心に自ら回転することを何というか。',
     a: '回転',
     b: '周回',
@@ -3570,7 +3721,7 @@ const quizDataJp = [
     correct: 'c'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '地球の自転の向きは、次のうちどの方位からどの方位か。',
     a: '北から南',
     b: '南から北',
@@ -3580,7 +3731,7 @@ const quizDataJp = [
     correct: 'd'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '天体は、東から西へ１日に１回転するように見える。このような天体の見かけの運動を何というか。',
     a: '日周運動',
     b: '年周運動',
@@ -3590,7 +3741,7 @@ const quizDataJp = [
     correct: 'a'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '日周運動では、天体は一時間あたりに約何°の割合で動いているように見えるか。',
     a: '30°',
     b: '15°',
@@ -3600,7 +3751,7 @@ const quizDataJp = [
     correct: 'b'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '観測地から見て、太陽が真南にくることを何というか。',
     a: '天頂',
     b: '天球',
@@ -3610,7 +3761,7 @@ const quizDataJp = [
     correct: 'c'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '天体がほかの天体のまわりを回転することを何というか。',
     a: '回転',
     b: '周回',
@@ -3620,7 +3771,7 @@ const quizDataJp = [
     correct: 'd'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '地球は太陽のまわりを一年で何°回転するか。',
     a: '1°',
     b: '15°',
@@ -3630,7 +3781,7 @@ const quizDataJp = [
     correct: 'd'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '年周運動における、１年間の太陽の通り道を何というか。',
     a: '黄道',
     b: '赤道',
@@ -3640,7 +3791,7 @@ const quizDataJp = [
     correct: 'a'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '一年のうちで、日の出・日の入りが最も北よりになるのはいつか。',
     a: '春分の日',
     b: '夏至の日',
@@ -3650,7 +3801,7 @@ const quizDataJp = [
     correct: 'b'
   },
   {
-    check: 'G3_ryuge_E',
+    check: 'G3_ryuge_SI',
     question: '一年のうち、地軸の北側が太陽と反対側を向いているのはいつか。',
     a: '春分の日',
     b: '夏至の日',
@@ -3659,6 +3810,160 @@ const quizDataJp = [
     explanation: 'この問題の解説\n冬至の日は、北半球において、一年の中で最も昼の長さが短くなり、南中高度も低くなります。',
     correct: 'd'
   },
+
+    // 中３ 龍華 社会
+
+  {
+    check: 'G3_ryuge_SS',
+    question: '第１問\n1215年、イギリスで王様の悪政に対し、貴族が王権を制限して自分たちの特権を認めさせたものを何という？',
+    a: '人権宣言',
+    b: '独立宣言',
+    c: '権利の章典',
+    d: 'マグナ＝カルタ',
+    explanation: 'この問題の解説\n答え：d マグナ＝カルタ\ncの権利の章典は1689年です。',
+    correct: 'd'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第２問\n1789年、フランス革命後に「人は生まれながら、自由で平等な権利をもつ」と定めた宣言を何という？',
+    a: '人権宣言',
+    b: '人間宣言',
+    c: '国民宣言',
+    d: '独立宣言',
+    explanation: 'この問題の解説\n答え：a 人権宣言\nb 人間宣言、c 国民宣言は存在しません。\nd 独立宣言はアメリカですね！',
+    correct: 'a'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第３問\n『統治論』を著したイギリスの思想家はだれ？',
+    a: '福沢諭吉',
+    b: 'ジョン＝ロック',
+    c: 'モンテスキュー',
+    d: 'マイケル＝ジャクソン',
+    explanation: 'この問題の解説\n答え：b ジョン＝ロック\na 福沢諭吉は『学問のすすめ』で日本人、\nc モンテスキューは『法の精神』で三権分立を主張した人！！',
+    correct: 'b'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第４問\n第一次世界大戦後、世界で初めて社会権を明記したドイツで制定された憲法は？',
+    a: 'ドイツ憲法',
+    b: 'ワイマール憲法',
+    c: 'オカマ憲法',
+    d: '日本国憲法',
+    explanation: 'この問題の解説\n答え：b ワイマール憲法\nc オカマ憲法は、ワンピースでミスターぼんくれーがつかいこなす憲法ですね！',
+    correct: 'b'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第５問\n日本国憲法の施行日は？',
+    a: '1946年 5月3日',
+    b: '1946年11月3日',
+    c: '1947年 5月3日',
+    d: '1947年11月3日',
+    explanation: 'この問題の解説\n答え：c 1947年 5月3日\nb 1946年11月3日は公布日（発表された日）です！',
+    correct: 'c'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第６問\n日本国憲法の三大原則は、国民主権・基本的人権の尊重ともう一つは？',
+    a: '納税',
+    b: '教育',
+    c: '民主主義',
+    d: '平和主義',
+    explanation: 'この問題の解説\n答え：d 平和主義\n',
+    correct: 'd'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第７問\n自衛隊の元の組織は1950年、朝鮮戦争のときにつくられたが、名称は？',
+    a: '防衛省',
+    b: '国防省',
+    c: '検察',
+    d: '警察予備隊',
+    explanation: 'この問題の解説\n答え：d 警察予備隊\n警察予備隊が1954年に自衛隊になりました！',
+    correct: 'd'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第８問\n天皇の仕事のことを何という？',
+    a: '国事行為',
+    b: '業務',
+    c: '助言と承認',
+    d: '象徴',
+    explanation: 'この問題の解説\n答え：a 国事行為\nc 内閣の助言と承認は、国事行為に必要なことです！',
+    correct: 'a'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第９問\nストライキなどを行う権利は、次のうちどれ？',
+    a: '団結権',
+    b: '団体交渉権',
+    c: '団体行動権',
+    d: '自由権',
+    explanation: 'この問題の解説\n答え：c 団体行動権\na 団結権,b 団体交渉権,c 団体行動権をまとめて労働三権（労働基本権）といいます！',
+    correct: 'c'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第１０問\n自由権の３分類で、精神の自由、生命・身体の自由、あともう一つは？',
+    a: '信教の自由',
+    b: '学問の自由',
+    c: '思想・良心の自由',
+    d: '経済活動の自由',
+    explanation: 'この問題の解説\n答え：d 経済活動の自由\na 信教の自由,b 学問の自由,c 思想・良心の自由はすべて精神の自由の内容です！',
+    correct: 'd'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第１１問\n男女がともに家庭生活を含めたあらゆる分野で責任を担い、協力する社会をつくろうと、1999年に制定された法律は？',
+    a: '男女雇用機会均等法',
+    b: '男女共同参画社会基本法',
+    c: '個人情報保護法',
+    d: '刑法',
+    explanation: 'この問題の解説\n答え：b 男女共同参画社会基本法\na 男女雇用機会均等法は、就職時の条件などで男女で差別してはいけないとするものです！',
+    correct: 'b'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第１２問\n憲法第２５条「すべて国民は、健康で文化的な最低限度の生活を営む権利を有する。」とありますが、これは何権を意味しますか？',
+    a: '平等権',
+    b: '自由権',
+    c: '生存権',
+    d: '請求権',
+    explanation: 'この問題の解説\n答え：c 生存権',
+    correct: 'c'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第１３問\n国連本部が置かれている都市は？',
+    a: 'サンフランシスコ',
+    b: 'ニューヨーク',
+    c: 'シカゴ',
+    d: 'ジュネーブ',
+    explanation: 'この問題の解説\n答え：b ニューヨーク\nd ジュネーブは、スイスの都市で国際連盟のときの本部が置かれていました！',
+    correct: 'b'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第１４問\n国連の現在の事務総長は？',
+    a: 'グテーレス',
+    b: 'アントニオ猪木',
+    c: 'プーチン',
+    d: 'バイデン',
+    explanation: 'この問題の解説\n答え：a グテーレス\na グテーレスはポルトガルの政治家で、よくテレビにも映っています！',
+    correct: 'a'
+  },
+  {
+    check: 'G3_ryuge_SS',
+    question: '第１５問\n安全保障理事会の常任理事国５つは、アメリカ・イギリス・フランス・中国ともう一つは？',
+    a: 'ロシア',
+    b: '日本',
+    c: 'カナダ',
+    d: 'ブラジル',
+    explanation: 'この問題の解説\n答え：a ロシア\nb 日本は非常任理事国です！\n常任理事国には拒否権があることも大切です！',
+    correct: 'a'
+  },
+
 
   //// 中３ 大正
 

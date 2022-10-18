@@ -81,7 +81,11 @@ function showQuiz() {
 }
 
 function checkScore() {
-  return quiz + '問中' + score + '問正解\n何度でも挑戦しよう！'
+  if(quiz == 0){
+    return "問題準備中。更新までお待ちください。"
+  } else {
+    return quiz + '問中' + score + '問正解\n何度でも挑戦しよう！'
+  }
 }
 
 function startQuiz() {
