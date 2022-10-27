@@ -2,329 +2,351 @@
 <html lang="jp">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>つぼみテスト</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6KJKP3HQB"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>つぼみテスト</title>
+   <link rel="stylesheet" href="style.css">
+   <!-- <script type="module" src="test.js"></script> -->
+   <meta name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6KJKP3HQB"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-        gtag('config', 'G-X6KJKP3HQB');
-    </script>
-    <script type="text/javascript">
-        // ▼HTMLの読み込み直後に実行：
-        document.addEventListener('DOMContentLoaded', function () {
-
-            // ▼2階層目の要素を全て非表示にする
-            const allSubBoxes1 = document.getElementsByClassName("subbox1");
-            for (i = 0; i < allSubBoxes1.length; i++) {
-                allSubBoxes1[i].style.display = 'none';
-            }
-            // ▼3階層目の要素を全て非表示にする
-            const allSubBoxes2 = document.getElementsByClassName("subbox2");
-            for (i = 0; i < allSubBoxes2.length; i++) {
-                allSubBoxes2[i].style.display = 'none';
-            }
-
-        });
-    </script>
+      gtag('config', 'G-X6KJKP3HQB');
+   </script>
    <script type="text/javascript">
-    // ▼HTMLの読み込み直後に実行：
-    document.addEventListener('DOMContentLoaded', function () {
+      // ▼HTMLの読み込み直後に実行：
+      document.addEventListener('DOMContentLoaded', function () {
+         const Quiz = document.getElementById('quiz');
+         const index = document.getElementById('index');
+         Quiz.style.display = 'none';
+         index.style.display = 'block';
+         // ▼2階層目の要素を全て非表示にする
+         const allSubBoxes1 = document.getElementsByClassName("subbox1");
+         for (i = 0; i < allSubBoxes1.length; i++) {
+            allSubBoxes1[i].style.display = 'none';
+         }
+         // ▼3階層目の要素を全て非表示にする
+         const allSubBoxes2 = document.getElementsByClassName("subbox2");
+         for (i = 0; i < allSubBoxes2.length; i++) {
+            allSubBoxes2[i].style.display = 'none';
+         }
 
-       // ▼全てのプルダウンメニューセットごとに処理
-       const mainBoxes = document.getElementsByClassName('pulldownset');
-       for (i = 0; i < mainBoxes.length; i++) {
 
-          const mainSelect = mainBoxes[i].getElementsByClassName("mainselect");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
-          mainSelect[0].onchange = function () {
-             // ▼同じ親要素に含まれているすべての2階層目(サブ)要素を消す
-             const subBox = this.parentNode.getElementsByClassName("subbox1");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-             for (j = 0; j < subBox.length; j++) {
-                console.log(j);
-                subBox[j].style.display = 'none';
-             }
+         // ▼全てのプルダウンメニューセットごとに処理
+         const mainBoxes = document.getElementsByClassName('pulldownset');
+         for (i = 0; i < mainBoxes.length; i++) {
 
-             // ▼指定された2階層目(サブ)要素だけを表示する
-             if (this.value) {
-                const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                console.log(this.value);
-                targetSub.style.display = 'inline';
-             }
-             // ▼3階層目の要素を全て非表示にする
-             const allSubBoxes2 = document.getElementsByClassName("subbox2");
-             for (i = 0; i < allSubBoxes2.length; i++) {
-                allSubBoxes2[i].style.display = 'none';
-             }
-          }
+            const mainSelect = mainBoxes[i].getElementsByClassName("mainselect");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
+            mainSelect[0].onchange = function () {
+               // ▼同じ親要素に含まれているすべての2階層目(サブ)要素を消す
+               const subBox = this.parentNode.getElementsByClassName("subbox1");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
+               for (j = 0; j < subBox.length; j++) {
+                  console.log(j);
+                  subBox[j].style.display = 'none';
+               }
 
-       }
-    });
- </script>
- <script type="text/javascript">
-    // ▼HTMLの読み込み直後に実行：
-    document.addEventListener('DOMContentLoaded', function () {
+               // ▼指定された2階層目(サブ)要素だけを表示する
+               if (this.value) {
+                  const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
+                  console.log(this.value);
+                  targetSub.style.display = 'inline';
+               }
+               // ▼3階層目の要素を全て非表示にする
+               const allSubBoxes2 = document.getElementsByClassName("subbox2");
+               for (i = 0; i < allSubBoxes2.length; i++) {
+                  allSubBoxes2[i].style.display = 'none';
+               }
+            }
+         }
+         // ▼全てのプルダウンメニューセットごとに処理
+         const mainBoxes2 = document.getElementsByClassName('pulldownset');
+         for (ii = 0; ii < mainBoxes2.length; ii++) {
 
-       // ▼全てのプルダウンメニューセットごとに処理
-       const mainBoxes2 = document.getElementsByClassName('pulldownset');
-       for (ii = 0; ii < mainBoxes2.length; ii++) {
+            const mainSelect2 = mainBoxes2[ii].getElementsByClassName("subbox1");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
 
-          const mainSelect2 = mainBoxes2[ii].getElementsByClassName("subbox1");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
+            for (x = 0; x < 3; x++) {
+               mainSelect2[x].onchange = function () {
+                  // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
+                  const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
+                  for (jj = 0; jj < subBox2.length; jj++) {
+                     console.log(jj);
+                     subBox2[jj].style.display = 'none';
+                  }
 
-          for (x = 0; x < 4; x++) {
-             mainSelect2[x].onchange = function () {
-                // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
-                const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-                for (jj = 0; jj < subBox2.length; jj++) {
-                   console.log(jj);
-                   subBox2[jj].style.display = 'none';
-                }
-
-                // ▼指定された3階層目(サブ2)要素だけを表示する
-                if (this.value) {
-                   const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                   console.log(this.value);
-                   targetSub2.style.display = 'inline';
-                }
-             }
-          }
-       }
-    });
-    </script>
+                  // ▼指定された3階層目(サブ2)要素だけを表示する
+                  if (this.value) {
+                     const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
+                     console.log(this.value);
+                     targetSub2.style.display = 'inline';
+                  }
+               }
+            }
+         }
+      });
+   </script>
 </head>
 
 <body>
-    <h1>学習塾つぼみ</h1>
-    <h1>2学期中間テスト対策</h1>
-    <form>
-        <!-- test -->
-        <!-- ▼2段階プルダウンメニューの例（市を選択すると区が出てくる） -->
-        <div class="pulldownset">
+   <div id="index">
+      <h1>学習塾つぼみ</h1>
+      <h1>2学期期末テスト対策</h1>
+      <form>
+         <!-- test -->
+         <!-- ▼2段階プルダウンメニューの例（市を選択すると区が出てくる） -->
+         <div class="pulldownset">
 
             <!-- ========================================== -->
             <!-- (※1)▼1段階目(メイン)のプルダウンメニュー -->
             <select class="mainselect">
-                <option value="">学校を選択</option>
-                <option value="kamei">亀井</option>
-                <option value="ryuge">龍華</option>
-                <option value="taisho">大正</option>
-                <option value="akenan">曙川南</option>
+               <option value="">学校を選択</option>
+               <option value="kamei">亀井</option>
+               <option value="ryuge">龍華</option>
+               <option value="taisho">大正</option>
+               <option value="akenan">曙川南</option>
+               <option value="nagayoshi">長吉六反</option>
             </select>
             <br>
             <!-- ================================================================ -->
             <!-- (※2)▼項目「亀井」に対応する2段階目(サブ)のプルダウンメニュー -->
             <select id="kamei" class="subbox1">
-                <option value="">学年を選択</option>
-                <option value="kamei1">亀井中１</option>
-                <option value="kamei2">亀井中２</option>
-                <option value="kamei3">亀井中３</option>
+               <option value="">学年を選択</option>
+               <option value="kamei1">亀井中１</option>
+               <option value="kamei2">亀井中２</option>
+               <option value="kamei3">亀井中３</option>
             </select>
 
             <!-- ================================================================ -->
             <!-- (※3)▼項目「龍華」に対応する2段階目(サブ)のプルダウンメニュー -->
             <select id="ryuge" class="subbox1">
-                <option value="">学年を選択</option>
-                <option value="ryuge1">龍華中１</option>
-                <option value="ryuge2">龍華中２</option>
-                <option value="ryuge3">龍華中３</option>
+               <option value="">学年を選択</option>
+               <option value="ryuge1">龍華中１</option>
+               <option value="ryuge2">龍華中２</option>
+               <option value="ryuge3">龍華中３</option>
             </select>
 
             <!-- ================================================================ -->
             <!-- (※4)▼項目「大正」に対応する2段階目(サブ)のプルダウンメニュー -->
             <select id="taisho" class="subbox1">
-                <option value="">学年を選択</option>
-                <option value="taisho1">大正中１</option>
-                <option value="taisho2">大正中２</option>
-                <option value="taisho3">大正中３</option>
+               <option value="">学年を選択</option>
+               <option value="taisho1">大正中１</option>
+               <option value="taisho2">大正中２</option>
+               <option value="taisho3">大正中３</option>
             </select>
 
             <!-- ====================================================== -->
             <!-- (※5)▼項目「曙川南」に対応する2段階目(サブ)のボックス -->
             <select id="akenan" class="subbox1">
-                <option value="">学年を選択</option>
-                <option value="akenan1">曙川南中１</option>
-                <option value="akenan2">曙川南中２</option>
-                <!-- <option value="akenan3.html">曙川南中３</option> -->
+               <option value="">学年を選択</option>
+               <option value="akenan1">曙川南中１</option>
+               <option value="akenan2">曙川南中２</option>
+               <!-- <option valtest_quiz">曙川南中３</option> -->
             </select>
+                        <!-- ====================================================== -->
+            <!-- (※6)▼項目「長吉六反」に対応する2段階目(サブ)のボックス -->
+            <select id="akenan" class="subbox1">
+                <option value="">学年を選択</option>
+                <option value="nagayoshi1">長吉六反中1</option>
+                <!-- <option value="nagayoshi2">長吉六反中2</option> -->
+                <option value="nagayoshi3">長吉六反中3</option>
+             </select>
 
             <br>
 
             <!-- ▼項目「亀井中１」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="kamei1" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G1_kamei_E.html">英語</option>
-                <!-- <option value="G1_kamei_J.html">国語</option> -->
-                <option value="G1_kamei_SI.html">理科</option>
-                <option value="G1_kamei_SS.html">社会</option>
+               <option value="">科目を選択</option>
+               <option value="G1_kamei_E.html">英語</option>
+               <option value="G1_kamei_J.html">国語</option>
+               <option value="G1_kamei_SI.html">理科</option>
+               <option value="G1_kamei_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「亀井中２」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="kamei2" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G2_kamei_E.html">英語</option>
-                <!-- <option value="G2_kamei_J.html">国語</option> -->
-                <option value="G2_kamei_SI.html">理科</option>
-                <option value="G2_kamei_SS.html">社会</option>
+               <option value="">科目を選択</option>
+               <option value="G2_kamei_E.html">英語</option>
+               <option value="G2_kamei_J.html">国語</option>
+               <option value="G2_kamei_SI.html">理科</option>
+               <option value="G2_kamei_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「亀井中３」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="kamei3" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G3_kamei_E.html">英語</option>
-                <!-- <option value="G3_kamei_J.html">国語</option> -->
-                <option value="G3_kamei_SI.html">理科</option>
-                <option value="G3_kamei_SS.html">社会</option>
+               <option value="">科目を選択</option>
+               <option value="G3_kamei_E.html">英語</option>
+               <option value="G3_kamei_J.html">国語</option>
+               <option value="G3_kamei_SI.html">理科</option>
+               <option value="G3_kamei_SS.html">社会</option>
             </select>
 
 
             <!-- ▼項目「龍華中１」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="ryuge1" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G1_ryuge_E.html">英語</option>
-                <!-- <option value="G1_ryuge_J.html">国語</option> -->
-                <option value="G1_ryuge_SI.html">理科</option>
-                <option value="G1_ryuge_SS.html">社会</option>
+               <option value="">科目を選択</option>
+               <option value="G1_ryuge_E.html">英語</option>
+               <option value="G1_ryuge_J.html">国語</option>
+               <option value="G1_ryuge_SI.html">理科</option>
+               <option value="G1_ryuge_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「龍華中２」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="ryuge2" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G2_ryuge_E.html">英語</option>
-                <!-- <option value="G2_ryuge_J.html">国語</option> -->
-                <option value="G2_ryuge_SI.html">理科</option>
-                <option value="G2_ryuge_SS.html">社会</option>
+               <option value="">科目を選択</option>
+               <option value="G2_ryuge_E.html">英語</option>
+               <option value="G2_ryuge_J.html">国語</option>
+               <option value="G2_ryuge_SI.html">理科</option>
+               <option value="G2_ryuge_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「龍華中３」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="ryuge3" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G3_ryuge_E.html">英語</option>
-                <!-- <option value="G3_ryuge_J.html">国語</option> -->
-                <option value="G3_ryuge_SI.html">理科</option>
-                <option value="G3_ryuge_SS.html">社会</option>
+               <option value="">科目を選択</option>
+               <option value="G3_ryuge_E.html">英語</option>
+               <option value="G3_ryuge_J.html">国語</option>
+               <option value="G3_ryuge_SI.html">理科</option>
+               <option value="G3_ryuge_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「大正中１」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="taisho1" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G1_taisho_E.html">英語</option>
-                <!-- <option value="G1_taisho_J.html">国語</option> -->
-                <option value="G1_taisho_SI.html">理科</option>
-                <!-- <option value="G1_taisho_SS.html">社会</option> -->
+               <option value="">科目を選択</option>
+               <option value="G1_taisho_E.html">英語</option>
+               <option value="G1_taisho_J.html">国語</option>
+               <option value="G1_taisho_SI.html">理科</option>
+               <option value="G1_taisho_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「大正中２」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="taisho2" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G2_taisho_E.html">英語</option>
-                <!-- <option value="G2_taisho_J.html">国語</option> -->
-                <option value="G2_taisho_SI.html">理科</option>
-                <!-- <option value="G2_taisho_SS.html">社会</option> -->
+               <option value="">科目を選択</option>
+               <option value="G2_taisho_E.html">英語</option>
+               <option value="G2_taisho_J.html">国語</option>
+               <option value="G2_taisho_SI.html">理科</option>
+               <option value="G2_taisho_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「大正中３」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="taisho3" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G3_taisho_E.html">英語</option>
-                <!-- <option value="G3_taisho_J.html">国語</option> -->
-                <option value="G3_taisho_SI.html">理科</option>
-                <option value="G3_taisho_SS.html">社会</option>
+               <option value="">科目を選択</option>
+               <option value="G3_taisho_E.html">英語</option>
+               <option value="G3_taisho_J.html">国語</option>
+               <option value="G3_taisho_SI.html">理科</option>
+               <option value="G3_taisho_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「曙南中１」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="akenan1" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G1_akenan_E.html">英語</option>
-                <!-- <option value="G1_akenan_J.html">国語</option> -->
-                <option value="G1_akenan_SI.html">理科</option>
-                <!-- <option value="G1_akenan_SS.html">社会</option> -->
+               <option value="">科目を選択</option>
+               <option value="G1_akenan_E.html">英語</option>
+               <option value="G1_akenan_J.html">国語</option>
+               <option value="G1_akenan_SI.html">理科</option>
+               <option value="G1_akenan_SS.html">社会</option>
             </select>
 
             <!-- ▼項目「曙南中２」に対応する3段階目(サブ2)のプルダウンメニュー -->
             <select id="akenan2" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G2_akenan_E.html">英語</option>
-                <!-- <option value="G2_akenan_J.html">国語</option> -->
-                <option value="G2_akenan_SI.html">理科</option>
-                <!-- <option value="G2_akenan_SS.html">社会</option> -->
+               <option value="">科目を選択</option>
+               <option value="G2_akenan_E.html">英語</option>
+               <option value="G2_akenan_J.html">国語</option>
+               <option value="G2_akenan_SI.html">理科</option>
+               <option value="G2_akenan_SS.html">社会</option>
             </select>
+            <!-- ▼項目「曙南中3」に対応する3段階目(サブ2)のプルダウンメニュー
+            <select id="akenan3" class="subbox2" onChange="location.href=value;">
+                <option value="">科目を選択</option>
+                <option value="G3_akenan_E.html">英語</option>
+                <option value="G3_akenan_J.html">国語</option>
+                <option value="G3_akenan_SI.html">理科</option>
+                <option value="G3_akenan_SS.html">社会</option>
+             </select> -->
 
-            <!-- ▼項目「曙南中３」に対応する3段階目(サブ2)のプルダウンメニュー -->
-            <!-- <select id="akenan3" class="subbox2" onChange="location.href=value;">
-        <option value="">科目を選択</option>
-        <option value="G3_akenan_E.html">英語</option>
-        <option value="G3_akenan_J.html">国語</option> 
-        <option value="G3_akenan_SI.html">理科</option>
-        <option value="G3_akenan_SS.html">社会</option>
-     </select>-->
+            <!-- ▼項目「長吉六反中1」に対応する3段階目(サブ2)のプルダウンメニュー -->
+            <select id="nagayoshi1" class="subbox2" onChange="location.href=value;">
+                <option value="">科目を選択</option>
+                <option value="G1_nagayoshi_E.html">英語</option>
+                <option value="G1_nagayoshi_J.html">国語</option>
+                <option value="G1_nagayoshi_SI.html">理科</option>
+                <option value="G1_nagayoshi_SS.html">社会</option>
+             </select>
+
+            <!-- ▼項目「長吉六反中2」に対応する3段階目(サブ2)のプルダウンメニュー
+            <select id="nagayoshi2" class="subbox2" onChange="location.href=value;">
+                <option value="">科目を選択</option>
+                <option value="G2_nagayoshi_E.html">英語</option>
+                <option value="G2_nagayoshi_J.html">国語</option>
+                <option value="G2_nagayoshi_SI.html">理科</option>
+                <option value="G2_nagayoshi_SS.html">社会</option>
+             </select> -->
+
+             <!-- ▼項目「長吉六反中3」に対応する3段階目(サブ2)のプルダウンメニュー -->
+            <select id="nagayoshi3" class="subbox2" onChange="location.href=value;">
+                <option value="">科目を選択</option>
+                <option value="G3_nagayoshi_E.html">英語</option>
+                <option value="G3_nagayoshi_J.html">国語</option>
+                <option value="G3_nagayoshi_SI.html">理科</option>
+                <option value="G3_nagayoshi_SS.html">社会</option>
+             </select>
 
 
-            <!-- <select name="select" onChange="location.href=value;">
-            <option value="#">ページを選択してください</option>
-            <option value="G1_kamei_E.html">亀井１年 英語</option>
-            <option value="G1_kamei_J.html">亀井１年 国語</option>
-            <option value="G1_kamei_SS.html">亀井１年 社会</option>
-            <option value="G1_kamei_SI.html">亀井１年 理科</option>
-            <option value="G2_kamei_E.html">亀井２年 英語</option>
-            <option value="G2_kamei_J.html">亀井２年 国語</option>
-            <option value="G2_kamei_SS.html">亀井２年 社会</option>
-            <option value="G2_kamei_SI.html">亀井２年 理科</option>
-            <option value="G3_Kamei_E.html">亀井３年 英語</option>
-            <option value="G3_Kamei_J.html">亀井３年 国語</option>
-            <option value="G3_Kamei_SS.html">亀井３年 社会</option>
-            <option value="G3_Kamei_SI.html">亀井３年 理科</option>
-            <option value="G1_ryuge_E.html">龍華１年 英語</option>
-            <option value="G1_ryuge_J.html">龍華１年 国語</option>
-            <option value="G1_ryuge_SS.html">龍華１年 社会</option>
-            <option value="G1_ryuge_SI.html">龍華１年 理科</option>
-            <option value="G2_ryuge_E.html">龍華２年 英語</option>
-            <option value="G2_ryuge_J.html">龍華２年 国語</option>
-            <option value="G2_ryuge_SS.html">龍華２年 社会</option>
-            <option value="G2_ryuge_SI.html">龍華２年 理科</option>
-            <option value="G3_ryuge_E.html">龍華３年 英語</option>
-            <option value="G3_ryuge_J.html">龍華３年 国語</option>
-            <option value="G3_ryuge_SS.html">龍華３年 社会</option>
-            <option value="G3_ryuge_SI.html">龍華３年 理科</option>
-            <option value="G1_taisho_E.html">大正１年 英語</option>
-            <option value="G1_taisho_J.html">大正１年 国語</option>
-            <option value="G1_taisho_SS.html">大正１年 社会</option>
-            <option value="G1_taisho_SI.html">大正１年 理科</option>
-            <option value="G2_taisho_E.html">大正２年 英語</option>
-            <option value="G2_taisho_J.html">大正２年 国語</option>
-            <option value="G2_taisho_SS.html">大正２年 社会</option>
-            <option value="G2_taisho_SI.html">大正２年 理科</option>
-            <option value="G3_taisho_E.html">大正３年 英語</option>
-            <option value="G3_taisho_J.html">大正３年 国語</option>
-            <option value="G3_taisho_SS.html">大正３年 社会</option>
-            <option value="G3_taisho_SI.html">大正３年 理科</option>
-            <option value="G1_akenan_E.html">曙川南１年 英語</option>
-            <option value="G1_akenan_J.html">曙川南１年 国語</option>
-            <option value="G1_akenan_SS.html">曙川南１年 社会</option>
-            <option value="G1_akenan_SI.html">曙川南１年 理科</option>
-            <option value="G2_akenan_E.html">曙川南２年 英語</option>
-            <option value="G2_akenan_J.html">曙川南２年 国語</option>
-            <option value="G2_akenan_SS.html">曙川南２年 社会</option>
-            <option value="G2_akenan_SI.html">曙川南２年 理科</option>
-            <option value="G3_akenan_E.html">曙川南３年 英語</option>
-            <option value="G3_akenan_J.html">曙川南３年 国語</option>
-            <option value="G3_akenan_SS.html">曙川南３年 社会</option>
-            <option value="G3_akenan_SI.html">曙川南３年 理科</option>
-        </select> -->
-    </form>
-    <!-- <a id="G1_kamei_E" href="G1_kamei.html">亀井１年英語</a>
-    <a id="G1_kamei_SC" href="G1_kamei.html">亀井１年理科</a>
-    <a id="G1_kamei_SS" href="G1_kamei.html">亀井１年社会</a>
-    <a href="G2_kamei.html">亀井２年</a>
-    <a href="G3_kamei.html">亀井３年</a> -->
-    <div id="image">
-        <img src="rogo.jpg" alt="">
-    </div>
+
+      </form>
+      <h1>※ブラウザの戻るボタンを使わないで！！</h1>
+      <div id="image">
+         <img src="rogo.jpg" alt="">
+      </div>
+   </div>
+   <div id="quiz">
+      <button id="toppage" type=“button” onclick="location.href='index.html'">トップページ</button>
+      <div id="quiz-container">
+         <div id="quiz-header">
+            <h2 id="question">Question text</h2>
+
+            <form id="quiz-form" name="quizForm">
+               <ul>
+                  <li>
+                     <input type="radio" id="a" name="answer" value="a" />
+                     <label id="a-text" for="a">Question</label>
+                  </li>
+                  <li>
+                     <input type="radio" id="b" name="answer" value="b" />
+                     <label id="b-text" for="b">Question</label>
+                  </li>
+                  <li>
+                     <input type="radio" id="c" name="answer" value="c" />
+                     <label id="c-text" for="c">Question</label>
+                  </li>
+                  <li>
+                     <input type="radio" id="d" name="answer" value="d" />
+                     <label id="d-text" for="d">Question</label>
+                  </li>
+               </ul>
+            </form>
+         </div>
+
+         <button id="submit">回答する</button>
+
+         <div id="results-container">
+            <div id="results-header">
+               <h2 id="results"></h2>
+               <h3 id="explanation"></h3>
+               <button id="next-quiz">次の問題へ</button>
+            </div>
+         </div>
+
+         <div id="start-container">
+            <div id="start-header">
+               <h2 id="start">スタート</h2>
+               <button id="start-quiz">次の問題へ</button>
+            </div>
+         </div>
+      </div>
+   </div>
 
 </body>
 
