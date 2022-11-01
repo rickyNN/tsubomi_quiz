@@ -8,7 +8,6 @@
     <title>つぼみテスト</title>
     <script type="module" src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <!-- <script type="module" src="test.js"></script> -->
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <!-- Google tag (gtag.js) -->
@@ -20,77 +19,6 @@
 
         gtag('config', 'G-X6KJKP3HQB');
     </script>
-    <!-- <script type="text/javascript">
-      // ▼HTMLの読み込み直後に実行：
-      document.addEventListener('DOMContentLoaded', function () {
-         const Quiz = document.getElementById('quiz');
-         const index = document.getElementById('index');
-         Quiz.style.display = 'none';
-         index.style.display = 'block';
-         // ▼2階層目の要素を全て非表示にする
-         const allSubBoxes1 = document.getElementsByClassName("subbox1");
-         for (i = 0; i < allSubBoxes1.length; i++) {
-            allSubBoxes1[i].style.display = 'none';
-         }
-         // ▼3階層目の要素を全て非表示にする
-         const allSubBoxes2 = document.getElementsByClassName("subbox2");
-         for (i = 0; i < allSubBoxes2.length; i++) {
-            allSubBoxes2[i].style.display = 'none';
-         }
-
-
-         // ▼全てのプルダウンメニューセットごとに処理
-         const mainBoxes = document.getElementsByClassName('pulldownset');
-         for (i = 0; i < mainBoxes.length; i++) {
-
-            const mainSelect = mainBoxes[i].getElementsByClassName("mainselect");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
-            mainSelect[0].onchange = function () {
-               // ▼同じ親要素に含まれているすべての2階層目(サブ)要素を消す
-               const subBox = this.parentNode.getElementsByClassName("subbox1");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-               for (j = 0; j < subBox.length; j++) {
-                  console.log(j);
-                  subBox[j].style.display = 'none';
-               }
-
-               // ▼指定された2階層目(サブ)要素だけを表示する
-               if (this.value) {
-                  const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                  console.log(this.value);
-                  targetSub.style.display = 'inline';
-               }
-               // ▼3階層目の要素を全て非表示にする
-               const allSubBoxes2 = document.getElementsByClassName("subbox2");
-               for (i = 0; i < allSubBoxes2.length; i++) {
-                  allSubBoxes2[i].style.display = 'none';
-               }
-            }
-         }
-         // ▼全てのプルダウンメニューセットごとに処理
-         const mainBoxes2 = document.getElementsByClassName('pulldownset');
-         for (ii = 0; ii < mainBoxes2.length; ii++) {
-
-            const mainSelect2 = mainBoxes2[ii].getElementsByClassName("subbox1");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
-
-            for (x = 0; x < 5; x++) {
-               mainSelect2[x].onchange = function () {
-                  // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
-                  const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-                  for (jj = 0; jj < subBox2.length; jj++) {
-                     console.log(jj);
-                     subBox2[jj].style.display = 'none';
-                  }
-
-                  // ▼指定された3階層目(サブ2)要素だけを表示する
-                  if (this.value) {
-                     const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-                     console.log(this.value);
-                     targetSub2.style.display = 'inline';
-                  }
-               }
-            }
-         }
-      });
-   </script> -->
 </head>
 
 <body>
@@ -168,7 +96,7 @@
                <option value="G1_kamei_SI.html">理科</option>
                <option value="G1_kamei_SS.html">社会</option> -->
                 <div id="kamei1" class="subbox2">
-                    <button id="wait">英語</button>
+                    <button id="wait" type="button">英語</button>
                 </div>
 
                 <!-- </select> -->
@@ -264,13 +192,13 @@
                     <option value="G2_akenan_SS.html">社会</option>
                 </select>
                 <!-- ▼項目「曙南中3」に対応する3段階目(サブ2)のプルダウンメニュー
-            <select id="akenan3" class="subbox2" onChange="location.href=value;">
+                <select id="akenan3" class="subbox2" onChange="location.href=value;">
                 <option value="">科目を選択</option>
                 <option value="G3_akenan_E.html">英語</option>
                 <option value="G3_akenan_J.html">国語</option>
                 <option value="G3_akenan_SI.html">理科</option>
                 <option value="G3_akenan_SS.html">社会</option>
-             </select> -->
+                </select> -->
 
                 <!-- ▼項目「長吉六反中1」に対応する3段階目(サブ2)のプルダウンメニュー -->
                 <select id="nagayoshi1" class="subbox2" onChange="location.href=value;">
@@ -282,13 +210,13 @@
                 </select>
 
                 <!-- ▼項目「長吉六反中2」に対応する3段階目(サブ2)のプルダウンメニュー
-            <select id="nagayoshi2" class="subbox2" onChange="location.href=value;">
+                <select id="nagayoshi2" class="subbox2" onChange="location.href=value;">
                 <option value="">科目を選択</option>
                 <option value="G2_nagayoshi_E.html">英語</option>
                 <option value="G2_nagayoshi_J.html">国語</option>
                 <option value="G2_nagayoshi_SI.html">理科</option>
                 <option value="G2_nagayoshi_SS.html">社会</option>
-             </select> -->
+                </select> -->
 
                 <!-- ▼項目「長吉六反中3」に対応する3段階目(サブ2)のプルダウンメニュー -->
                 <select id="nagayoshi3" class="subbox2" onChange="location.href=value;">
@@ -298,17 +226,18 @@
                     <option value="G3_nagayoshi_SI.html">理科</option>
                     <option value="G3_nagayoshi_SS.html">社会</option>
                 </select>
+            </div>
         </form>
         <h1>※ブラウザの戻るボタンを使わないで！！</h1>
         <div id="image">
             <img src="rogo.jpg" alt="">
-        </div>
         </div>
     </div>
     <div id="quiz">
         <button id="toppage" type=“button” onclick="location.href='index.html'">トップページ</button>
         <div id="quiz-container">
             <div id="quiz-header">
+                <h2 id="quiznumber">Question text</h2>              
                 <h2 id="question">Question text</h2>
 
                 <form id="quiz-form" name="quizForm">
@@ -340,18 +269,18 @@
                     <h2 id="results"></h2>
                     <h3 id="explanation"></h3>
                     <button id="next-quiz">次の問題へ</button>
+                    <button id="back-quiz">やり直し</button>
                 </div>
             </div>
 
             <div id="start-container">
                 <div id="start-header">
                     <h2 id="start">スタート</h2>
-                    <button id="start-quiz">次の問題へ</button>
+                    <button id="start-quiz">スタート</button>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
