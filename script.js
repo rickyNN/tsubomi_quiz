@@ -106,6 +106,8 @@ const b_text = document.getElementById('b-text');
 const c_text = document.getElementById('c-text');
 const d_text = document.getElementById('d-text');
 
+const container = document.getElementById('quiz-container');
+
 // 送信ボタン
 const submitBtn = document.getElementById('submit');
 
@@ -226,6 +228,7 @@ function startQuiz() {
 
 
 submitBtn.addEventListener('click', event => {
+  // container.style.width='100%';
   event.preventDefault();
 
   // 回答を取得
