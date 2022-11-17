@@ -14,9 +14,9 @@ import { quizDataJp } from './quiz_data_jp.js';
 //ファイル名習得(学校と学年と科目判定)
 const filename = window.location.href.split('/').pop().replace(".html", "");
 
-const waitBtn = document.getElementById('wait');
-const Quiz = document.getElementById('quiz');
-const index = document.getElementById('index');
+// const waitBtn = document.getElementById('wait');
+// const Quiz = document.getElementById('quiz');
+// const index = document.getElementById('index');
 // const indevBtn = document.getElementById('wait');
 
 document.addEventListener('DOMContentLoaded', function () {
