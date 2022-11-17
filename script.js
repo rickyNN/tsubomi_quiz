@@ -1,15 +1,15 @@
-// import { quizDataJp } from './quiz_data_jp.js';
+import { quizDataJp } from './quiz_data_jp.js';
 
-let quizDataJp = [ {
-  check: 'index',
-  question: '次の文章の英訳として最も適切なものはどれ？\n私の父は高校で数学を教えています。',
-  a: 'My father teach math at high school.',
-  b: 'My father teachs math at high school.',
-  c: 'My father teaches math at high school.',
-  d: 'My father teachers math at high school.',
-  explanation: '主語が三人称単数になる場合、一般動詞の語尾にはsをつけます。\nただしteachなどのように元々の語尾がo, s, ch, sh, xの場合はesをつけます。',
-  correct: 'c'
-}]
+// let quizDataJp = [ {
+//   check: 'index',
+//   question: '次の文章の英訳として最も適切なものはどれ？\n私の父は高校で数学を教えています。',
+//   a: 'My father teach math at high school.',
+//   b: 'My father teachs math at high school.',
+//   c: 'My father teaches math at high school.',
+//   d: 'My father teachers math at high school.',
+//   explanation: '主語が三人称単数になる場合、一般動詞の語尾にはsをつけます。\nただしteachなどのように元々の語尾がo, s, ch, sh, xの場合はesをつけます。',
+//   correct: 'c'
+// }]
 
 //ファイル名習得(学校と学年と科目判定)
 const filename = window.location.href.split('/').pop().replace(".html", "");
@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-waitBtn.addEventListener('click', event => {
-  event.preventDefault();
-  Quiz.style.display = 'block';
-  index.style.display = 'none';
-});
+// waitBtn.addEventListener('click', event => {
+//   event.preventDefault();
+//   Quiz.style.display = 'block';
+//   index.style.display = 'none';
+// });
 
 //問題番号
 const quizNumberElm = document.getElementById('quiznumber');
