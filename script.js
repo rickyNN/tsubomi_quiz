@@ -20,8 +20,8 @@ const index = document.getElementById('index');
 // const indevBtn = document.getElementById('wait');
 
 document.addEventListener('DOMContentLoaded', function () {
-  Quiz.style.display = 'none';
-  index.style.display = 'block';
+  // Quiz.style.display = 'none';
+  // index.style.display = 'block';
   let i = 0;
   let ii = 0;
   let j = 0;
@@ -146,13 +146,13 @@ shuffleList(quizDataJp);
 function loadQuiz() {
   // 問題を取得
   const currentQuizData = quizDataJp[currentQuiz];
-//問題を配列化
+  //問題を配列化
   const currentArray = [currentQuizData.a, currentQuizData.b, currentQuizData.c, currentQuizData.d];
 　//問題番号を表示
   quizNumberElm.innerText = "第" + quiznumber + "問";
-    // 質問文を表示
+  // 質問文を表示
   questionElm.innerText = currentQuizData.question;
-//問題配列のランダムな並び替え
+  //問題配列のランダムな並び替え
   for (let i = (currentArray.length - 1); 0 < i; i--) {
 
     // 0〜(i+1)の範囲で値を取得
