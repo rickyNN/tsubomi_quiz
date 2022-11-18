@@ -328,6 +328,7 @@ const quizDataJp = [
 
   // 中３ 龍華 理科
   {
+    check: 'G3_ryuge_SI',
     question: '酸とアルカリが互いの性質を打ち消しあうような反応を何というか。',
     a: '中和反応',
     b: '吸熱反応',
@@ -336,6 +337,7 @@ const quizDataJp = [
     explanation: '',
   },
   {
+    check: 'G3_ryuge_SI',
     question: 'すべての中和反応で発生するものにおいて適当でないものは次のうちどれ。',
     a: '塩化ナトリウム',
     b: '塩',
@@ -344,6 +346,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n中和反応では、水と塩(えん)、さらに熱も発生します。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '次のうち酸性を示す物質はどれ。',
     a: '硫酸',
     b: '水酸化ナトリウム',
@@ -353,6 +356,7 @@ const quizDataJp = [
     correct: 'd'
   },
   {
+    check: 'G3_ryuge_SI',
     question: '次のうちアルカリ性を示す物質はどれ。',
     a: '水酸化ナトリウム',
     b: '塩化ナトリウム',
@@ -361,6 +365,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n水酸化〇〇となるものはアルカリ性を示しますが、アルカリ性の物質の中にはアンモニア水のように『水酸化』がつかない物質もあります。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '次のうち、酸性を示すイオンはどれ。',
     a: '水素イオン',
     b: '水酸化物イオン',
@@ -369,6 +374,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n酸性の物質が電離すると水素イオンが発生します。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '次のうちアルカリ性を示すイオンはどれ。',
     a: '水酸化物イオン',
     b: '水素イオン',
@@ -377,6 +383,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\nアルカリ性の物質が電離すると水酸化物イオンが発生します。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '中性を示すpHは次のうちどれ。',
     a: '7',
     b: '6',
@@ -385,6 +392,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\npHは0～14で小さくなるほど強い酸性を示し、大きくなるほど強いアルカリ性を示します。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: 'BTB溶液に塩酸を滴下したとき、溶液は何色になるか。',
     a: '黄色',
     b: '青色',
@@ -393,6 +401,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\nBTB溶液は酸性で黄色、中性で緑色、アルカリ性で青色を示します。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '塩化銅水溶液を電気分解するとき、陽極のほうへ移動するイオンはどれ。',
     a: '塩化物イオン',
     b: '銅イオン',
@@ -401,6 +410,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n電気分解をすると陽極に陰イオンが、陰極に陽イオンが移動します。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '塩酸と水酸化ナトリウム水溶液の中和でできる塩はどれ。',
     a: '塩化ナトリウム',
     b: '水',
@@ -409,6 +419,7 @@ const quizDataJp = [
     explanation: '',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '次のうち、一次電池はどれ。',
     a: '乾電池',
     b: 'リチウムイオン電池',
@@ -417,6 +428,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n使い捨ての電池を『一次電池』、充電して繰り返し使える電池を『二次電池』といいます。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: 'ある濃度のうすい塩酸15cm³に、ある濃度のうすい水酸化ナトリウム水溶液10cm³を加えると、過不足なく反応し中性となった。この塩酸が10cm3あるとき、水酸化ナトリウム水溶液は何cm3で中性になるか。',
     a: '6cm³',
     b: '8cm³',
@@ -425,6 +437,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n塩酸と水酸化ナトリウムの反応比は3：2です。比例計算を使って解きましょう。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '天体が、中心を通る軸を中心に自ら回転することを何というか。',
     a: '自転',
     b: '周回',
@@ -433,6 +446,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n地球は地軸を中心として自転します。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '地球の自転の向きは、次のうちどの方位からどの方位か。',
     a: '西から東',
     b: '南から北',
@@ -441,6 +455,7 @@ const quizDataJp = [
     explanation: '',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '天体は、東から西へ１日に１回転するように見える。このような天体の見かけの運動を何というか。',
     a: '日周運動',
     b: '年周運動',
@@ -449,6 +464,7 @@ const quizDataJp = [
     explanation: '',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '日周運動では、天体は一時間あたりに約何°の割合で動いているように見えるか。',
     a: '15°',
     b: '30°',
@@ -457,6 +473,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n日周運動において、天体は24時間で360°動いているように見えます。。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '観測地から見て、太陽が真南にくることを何というか。',
     a: '南中',
     b: '天球',
@@ -466,6 +483,7 @@ const quizDataJp = [
     correct: 'c'
   },
   {
+    check: 'G3_ryuge_SI',
     question: '天体がほかの天体のまわりを回転することを何というか。',
     a: '公転',
     b: '周回',
@@ -474,6 +492,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n地球は太陽を中心として、その周りを公転します。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '地球は太陽のまわりを一年で何°回転するか。',
     a: '360°',
     b: '15°',
@@ -482,6 +501,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n地球は太陽のまわりを一年間で１周します。。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '年周運動における、１年間の太陽の通り道を何というか。',
     a: '黄道',
     b: '赤道',
@@ -490,6 +510,7 @@ const quizDataJp = [
     explanation: '',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '一年のうちで、日の出・日の入りが最も北よりになるのはいつか。',
     a: '夏至の日',
     b: '春分の日',
@@ -498,6 +519,7 @@ const quizDataJp = [
     explanation: 'この問題の解説\n夏至の日は、北半球において、一年の中で最も昼の長さが長くなり、南中高度も高くなります。',
   },
   {
+    check: 'G3_ryuge_SI',
     question: '一年のうち、地軸の北側が太陽と反対側を向いているのはいつか。',
     a: '冬至の日',
     b: '夏至の日',
