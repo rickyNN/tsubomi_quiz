@@ -429,6 +429,7 @@ const quizDataJp = [
 
   // 中２ 龍華 数学
   {
+    check: 'G2_ryuge_M',
     question: '次のうち、大きさが常に等しい角の関係はどれ？',
     a: '対頂角',
     b: '錯角',
@@ -437,6 +438,7 @@ const quizDataJp = [
     explanation: '答え：対頂角\n「錯角」「同位角」は平行な直線であれば等しくなります。',
   },
   {    
+    check: 'G2_ryuge_M',
     question: '「AならばBである」ということがらについて、Aの部分のことをなんという？',
     a: '仮定',
     b: '演繹',
@@ -445,6 +447,7 @@ const quizDataJp = [
     explanation: '答え：仮定\n証明において問題文に書いてあることですね。\n「仮定より～」と書いて証明しましょう！',
   },
   {    
+    check: 'G2_ryuge_M',
     question: '「AならばBである」ということがらについて、Bの部分のことをなんという？',
     a: '結論',
     b: '結果',
@@ -453,6 +456,7 @@ const quizDataJp = [
     explanation: '答え：結論\n証明において「〇〇を証明しなさい」という部分ですね。\n証明の最後に「よって〇〇」という形でまとめましょう！',
   },
   {    
+    check: 'G2_ryuge_M',
     question: '次のことがらのうち、定義はどれ？',
     a: '「線分を2等分する点はその線分の中点である」',
     b: '「平行な2直線の錯角は等しい」',
@@ -461,6 +465,7 @@ const quizDataJp = [
     explanation: '答え：「線分を2等分する点はその線分の中点である」\n用語の意味を述べたものが定義ですね。\nこれは「線分の中点」の定義をしています。\n「国語辞典で意味を調べると載っていること」と考えましょう！',
   },
   {    
+    check: 'G2_ryuge_M',
     question: 'n角形の外角の和は何度？',
     a: '180°',
     b: '360°',
@@ -469,6 +474,7 @@ const quizDataJp = [
     explanation: '答え：360°\nたとえ何角形であっても外角の和は常に360°になります。',
   },
   {    
+    check: 'G2_ryuge_M',
     question: 'あることがらの仮定と結論をいれかえたものをなんという？',
     a: '逆',
     b: '裏',
@@ -477,6 +483,7 @@ const quizDataJp = [
     explanation: '答え：逆\n',
   },
   {    
+    check: 'G2_ryuge_M',
     question: '「自然数aについて、a²が9の倍数ならば、aは6の倍数である。」\nこのことがらの反例はどれ？',
     a: 'a＝15',
     b: 'a＝6',
@@ -485,6 +492,7 @@ const quizDataJp = [
     explanation: '答え：a＝15\n反例とは、ことがらが成り立たない例のことです。\na＝15なら、a²＝225なので9の倍数ですが、15は6の倍数ではありません。\na＝8はそもそもa²が9の倍数ではないので反例にはなりません。',
   },
   {    
+    check: 'G2_ryuge_M',
     question: '三角形の合同条件として正しくないものはどれ？',
     a: '3組の角がそれぞれ等しい',
     b: '3組の辺がそれぞれ等しい',
@@ -644,6 +652,7 @@ const quizDataJp = [
 
   // 中３ 龍華 数学
   {
+    check: 'G3_ryuge_M',
     question: '△ABCと△DEFが相似であることを述べているのはどれ？',
     a: '△ABC∽△DEF',
     b: '△ABC∞△DEF',
@@ -652,6 +661,7 @@ const quizDataJp = [
     explanation: '答え：△ABC∽△DEF\n基本中の基本ですね。',
   },
   {
+    check: 'G3_ryuge_M',
     question: '△ABCと△DEFが相似であるとき、成り立つことがらとして正しくないものはどれ？',
     a: 'AB：EF＝BC：DF',
     b: '∠ACB＝∠DFE',
@@ -660,6 +670,7 @@ const quizDataJp = [
     explanation: '答え：AB：EF＝BC：DF\n対応する辺が違いますね。',
   },
   {
+    check: 'G3_ryuge_M',
     question: '三角形の相似条件として適切でないものはどれ？',
     a: '1組の辺の比とその両端の角がそれぞれ等しい',
     b: '3組の辺の比がすべて等しい',
@@ -668,6 +679,7 @@ const quizDataJp = [
     explanation: '答え：1組の辺の比とその両端の角がそれぞれ等しい\n辺は比ですから、「1組の辺の比が等しい」なんて言葉はありえませんね。',
   },
   {
+    check: 'G3_ryuge_M',
     question: '△ABCと△DEFが相似であり、△ABC≡△DEFが証明したいとき、証明すればよいことがらとして正しいものはどれ？',
     a: 'BC＝EF',
     b: 'AB＝AC',
