@@ -213,7 +213,11 @@ function checkScore() {
   // if (quiz === score) {
   //   return quiz + '問中' + score + '問正解\nスクリーンショットを撮って、科目とともにLINEで報告しよう！'
   // } else {
-  return quiz + '問中' + score + '問正解\n何度でも挑戦しよう！'
+  if (quiz == 0) {
+    return '準備中！　更新までお待ちください！'
+  } else {
+    return quiz + '問中' + score + '問正解\n何度でも挑戦しよう！'
+  }
   // }
 }
 
