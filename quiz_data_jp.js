@@ -9,7 +9,6 @@ const quizDataJp = [
   //   explanation: 'この問題の答えはCです',
   // },
 
-
 ];
 
 export { quizDataJp }
