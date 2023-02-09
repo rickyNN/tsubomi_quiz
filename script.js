@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
     allSubBoxes2[i].style.display = 'none';
   }
 
-
   // ▼全てのプルダウンメニューセットごとに処理
   const mainBoxes = document.getElementsByClassName('pulldownset');
   for (i = 0; i < mainBoxes.length; i++) {
