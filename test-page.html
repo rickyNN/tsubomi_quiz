@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js)
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6KJKP3HQB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,7 +18,7 @@
         gtag('js', new Date());
 
         gtag('config', 'G-X6KJKP3HQB');
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -93,17 +93,18 @@
                     <option value="nantaka2">南高安中2</option>
                     <option value="nantaka3">南高安中3</option>
                 </select>
-                
+
+
                 <br>
 
                 <!-- ▼項目「亀井中１」に対応する3段階目(サブ2)のプルダウンメニュー -->
                 <select id="kamei1" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-               <option value="G1_kamei_E.html">英語</option>
-               <option value="G1_kamei_M.html">数学</option>
-               <option value="G1_kamei_SI.html">理科</option>
-               <option value="G1_kamei_SS.html">社会</option>
-                <!-- <div id="kamei1" class="subbox2">
+                    <option value="">科目を選択</option>
+                    <option value="G1_kamei_E.html">英語</option>
+                    <option value="G1_kamei_M.html">数学</option>
+                    <option value="G1_kamei_SI.html">理科</option>
+                    <option value="G1_kamei_SS.html">社会</option>
+                    <!-- <div id="kamei1" class="subbox2">
                     <button id="wait" type="button">英語</button>
                 </div> -->
 
@@ -201,11 +202,11 @@
                 </select>
                 <!-- ▼項目「曙南中3」に対応する3段階目(サブ2)のプルダウンメニュー -->
                 <select id="akenan3" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G3_akenan_E.html">英語</option>
-                <option value="G3_akenan_M.html">数学</option>
-                <option value="G3_akenan_SI.html">理科</option>
-                <option value="G3_akenan_SS.html">社会</option>
+                    <option value="">科目を選択</option>
+                    <option value="G3_akenan_E.html">英語</option>
+                    <option value="G3_akenan_M.html">数学</option>
+                    <option value="G3_akenan_SI.html">理科</option>
+                    <option value="G3_akenan_SS.html">社会</option>
                 </select>
 
                 <!-- ▼項目「長吉六反中1」に対応する3段階目(サブ2)のプルダウンメニュー -->
@@ -219,11 +220,38 @@
 
                 <!-- ▼項目「長吉六反中2」に対応する3段階目(サブ2)のプルダウンメニュー -->
                 <select id="nagayoshi2" class="subbox2" onChange="location.href=value;">
-                <option value="">科目を選択</option>
-                <option value="G2_nagayoshi_E.html">英語</option>
-                <option value="G2_nagayoshi_M.html">数学</option>
-                <option value="G2_nagayoshi_SI.html">理科</option>
-                <option value="G2_nagayoshi_SS.html">社会</option>
+                    <option value="">科目を選択</option>
+                    <option value="G2_nagayoshi_E.html">英語</option>
+                    <option value="G2_nagayoshi_M.html">数学</option>
+                    <option value="G2_nagayoshi_SI.html">理科</option>
+                    <option value="G2_nagayoshi_SS.html">社会</option>
+                </select>
+
+                <!-- ▼項目「長吉六反中3」に対応する3段階目(サブ2)のプルダウンメニュー -->
+                <select id="nagayoshi3" class="subbox2" onChange="location.href=value;">
+                    <option value="">科目を選択</option>
+                    <option value="G3_nagayoshi_E.html">英語</option>
+                    <option value="G3_nagayoshi_M.html">数学</option>
+                    <option value="G3_nagayoshi_SI.html">理科</option>
+                    <option value="G3_nagayoshi_SS.html">社会</option>
+                </select>
+
+                <!-- ▼項目「南高安中1」に対応する3段階目(サブ2)のプルダウンメニュー -->
+                <select id="nagayoshi1" class="subbox2" onChange="location.href=value;">
+                    <option value="">科目を選択</option>
+                    <option value="G1_nagayoshi_E.html">英語</option>
+                    <option value="G1_nagayoshi_M.html">数学</option>
+                    <option value="G1_nagayoshi_SI.html">理科</option>
+                    <option value="G1_nagayoshi_SS.html">社会</option>
+                </select>
+
+                <!-- ▼項目「長吉六反中2」に対応する3段階目(サブ2)のプルダウンメニュー -->
+                <select id="nagayoshi2" class="subbox2" onChange="location.href=value;">
+                    <option value="">科目を選択</option>
+                    <option value="G2_nagayoshi_E.html">英語</option>
+                    <option value="G2_nagayoshi_M.html">数学</option>
+                    <option value="G2_nagayoshi_SI.html">理科</option>
+                    <option value="G2_nagayoshi_SS.html">社会</option>
                 </select>
 
                 <!-- ▼項目「長吉六反中3」に対応する3段階目(サブ2)のプルダウンメニュー -->
@@ -241,11 +269,11 @@
             <img src="rogo.jpg" alt="">
         </div>
     </div>
-    <!-- <div id="quiz">
+    <div id="quiz">
         <button id="toppage" type=“button” onclick="location.href='index.html'">トップページ</button>
         <div id="quiz-container">
             <div id="quiz-header">
-                <h2 id="quiznumber">Question text</h2>              
+                <h2 id="quiznumber">Question text</h2>
                 <h2 id="question">Question text</h2>
 
                 <form id="quiz-form" name="quizForm">
@@ -288,7 +316,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </body>
 
 </html>
