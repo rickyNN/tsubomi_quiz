@@ -88,11 +88,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-waitBtn.addEventListener('click', event => {
-  event.preventDefault();
-  Quiz.style.display = 'block';
+function change (){
   index.style.display = 'none';
-});
+  Quiz.style.display = 'block';
+
+}
+
+document.getElementById("kamei1").onchange = change;
 
 //問題番号
 const quizNumberElm = document.getElementById('quiznumber');
