@@ -88,12 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// waitBtn.addEventListener('click', event => {
-//   event.preventDefault();
-//   Quiz.style.display = 'block';
-//   index.style.display = 'none';
-// });
-
 //問題番号
 const quizNumberElm = document.getElementById('quiznumber');
 // 質問文
