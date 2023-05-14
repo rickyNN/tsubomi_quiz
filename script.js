@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const mainSelect2 = mainBoxes2[ii].getElementsByClassName("subbox1");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
 
-    for (x = 0; x < 5; x++) {
+    for (x = 0; x < 6; x++) {
       mainSelect2[x].onchange = function () {
         // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
         const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
