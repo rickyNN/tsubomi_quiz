@@ -1,25 +1,29 @@
-import { quizDataJp } from './quiz_data_jp.js';
+// import { quizDataJp } from './quiz_data_jp.js';
+
+
+let quizDataJp = [{
+  grade: '1',
+  school: 'kamei',
+  subject: 'E',
+  question: '次の文章の英訳として最も適切なものはどれ？\n私の父は高校で数学を教えています。',
+  a: 'a',
+  b: 'b',
+  c: 'c',
+  d: 'd',
+  explanation: 'a',
+}];
+
+let schoolFilter = [];
+let gradeFilter = [];
+let subjectFilter = [];
 
 shuffleList(quizDataJp);
-
-// let quizDataJp = [{
-//   check: 'index',
-//   question: '次の文章の英訳として最も適切なものはどれ？\n私の父は高校で数学を教えています。',
-//   a: 'My father teach math at high school.',
-//   b: 'My father teachs math at high school.',
-//   c: 'My father teaches math at high school.',
-//   d: 'My father teachers math at high school.',
-//   explanation: '主語が三人称単数になる場合、一般動詞の語尾にはsをつけます。\nただしteachなどのように元々の語尾がo, s, ch, sh, xの場合はesをつけます。',
-//   correct: 'c'
-// }]
 
 //ファイル名習得(学校と学年と科目判定)
 const filename = window.location.href.split('/').pop().replace(".html", "");
 
 const Quiz = document.getElementById('quiz');
 const index = document.getElementById('index');
-
-let UsedQuizData = [];
 
 document.addEventListener('DOMContentLoaded', function () {
   Quiz.style.display = 'none';
@@ -56,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (this.value) {
         const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
         console.log(this.value);
+        let schoolFilter = quizDataJp.filter(object => object.school === this.value);
+        console.log(schoolFilter);
         targetSub.style.display = 'inline';
       }
       // ▼3階層目の要素を全て非表示にする
@@ -81,8 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // ▼指定された3階層目(サブ2)要素だけを表示する
         if (this.value) {
           const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-          console.log(this.value);
           targetSub2.style.display = 'inline';
+          console.log(this.value);
+          let gradeFilter = schoolFilter.filter(object => object.grade === this.value);
+          console.log(gradeFilter);
         }
       }
     }
@@ -99,13 +107,9 @@ document.addEventListener('DOMContentLoaded', function () {
         Quiz.style.display = 'block';
         console.log(this.value);
 
-/////////////////////////        //配列の追加うまくいってない
-        for (let yy = 0; yy < quizDataJp.length; yy++) {
-          if (this.value === quizDataJp[yy].check) {
-            UsedQuizData.push(quizDataJp[yy]);
-          }
-        }
-        console.log(UsedQuizData);
+        /////////////////////////修正////////////////
+        let subjectFilter = gradefilter.filter(object => object.subject === this.value);
+        console.log(subjectFilter);
         startQuiz();
       }
     }
@@ -355,7 +359,6 @@ startQuizBtn.addEventListener('click', event => {
 
   loadQuiz();
   showQuiz();
-  console.log(UsedQuizData);
 });
 
 
