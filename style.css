@@ -53,7 +53,6 @@ body {
 }
 
 
-
 div#quiz div#quiz-header {
   padding: 4rem;
 }
@@ -125,6 +124,7 @@ div#quiz button#toppage {
 
 div#quiz button:hover {
   background-color: #233bc4;
+  width: 100%;
 }
 
 div#quiz #results-container {

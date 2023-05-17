@@ -2,10 +2,31 @@
 
 
 let quizDataJp = [{
-  grade: '1',
-  school: 'kamei',
+  school: 'kamei ryuge',
+  grade: 'grade1',
   subject: 'E',
   question: '次の文章の英訳として最も適切なものはどれ？\n私の父は高校で数学を教えています。',
+  a: 'a',
+  b: 'b',
+  c: 'c',
+  d: 'd',
+  explanation: 'a',
+}
+,{
+  school: 'kamei ryuge',
+  grade: 'grade1',
+  subject: 'E',
+  question: '別の問題',
+  a: 'a',
+  b: 'b',
+  c: 'c',
+  d: 'd',
+  explanation: 'a',
+},{
+  school: 'kamei ryuge taisho',
+  grade: 'grade1',
+  subject: 'E',
+  question: '別の問題',
   a: 'a',
   b: 'b',
   c: 'c',
@@ -15,7 +36,7 @@ let quizDataJp = [{
 
 let schoolFilter = [];
 let gradeFilter = [];
-let subjectFilter = [];
+let completeFilter = [];
 
 shuffleList(quizDataJp);
 
@@ -60,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (this.value) {
         const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
         console.log(this.value);
-        let schoolFilter = quizDataJp.filter(object => object.school === this.value);
+        schoolFilter = quizDataJp.filter(object => object.school.includes(this.value));
         console.log(schoolFilter);
         targetSub.style.display = 'inline';
       }
@@ -89,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
           targetSub2.style.display = 'inline';
           console.log(this.value);
-          let gradeFilter = schoolFilter.filter(object => object.grade === this.value);
+          gradeFilter = schoolFilter.filter(object => object.grade === this.value);
           console.log(gradeFilter);
         }
       }
@@ -106,10 +127,8 @@ document.addEventListener('DOMContentLoaded', function () {
         index.style.display = 'none';
         Quiz.style.display = 'block';
         console.log(this.value);
-
-        /////////////////////////修正////////////////
-        let subjectFilter = gradefilter.filter(object => object.subject === this.value);
-        console.log(subjectFilter);
+        completeFilter = gradeFilter.filter(object => object.subject === this.value);
+        console.log(completeFilter);
         startQuiz();
       }
     }
@@ -177,7 +196,7 @@ startQuiz();
 
 function loadQuiz() {
   // 問題を取得
-  const currentQuizData = quizDataJp[currentQuiz];
+  const currentQuizData = completeFilter[currentQuiz];
   //問題を配列化
   const currentArray = [currentQuizData.a, currentQuizData.b, currentQuizData.c, currentQuizData.d];
   //問題番号を表示
@@ -202,7 +221,7 @@ function loadQuiz() {
   d_text.innerText = currentArray[3];
 }
 
-//quizDataJpの順番を並び替える
+//completeFilterの順番を並び替える
 function shuffleList(list) {
   var i = list.length;
   while (--i) {
@@ -284,13 +303,13 @@ submitBtn.addEventListener('click', event => {
   if (answer) {
 
     // 正誤判定
-    if (correct === quizDataJp[currentQuiz].a) {
-      showResults('正解！', quizDataJp[currentQuiz].explanation);
+    if (correct === completeFilter[currentQuiz].a) {
+      showResults('正解！', completeFilter[currentQuiz].explanation);
       quiz++;
       score++;
       console.log(score);
     } else {
-      showResults('残念...', quizDataJp[currentQuiz].explanation);
+      showResults('残念...', completeFilter[currentQuiz].explanation);
       quiz++;
     }
 
@@ -304,19 +323,19 @@ function nextQuiz() {
   currentQuiz++;
 
   // まだ問題が残っている
-  if (currentQuiz < quizDataJp.length) {
-    // 問題を取得
-    const currentQuizData = quizDataJp[currentQuiz];
-    //問題の学年_学校_科目が一致するとき
-    if (filename == currentQuizData.check) {
-      // 次の問題を読み込む
-      loadQuiz();
+  if (currentQuiz < completeFilter.length) {
+    // // 問題を取得
+    // const currentQuizData = completeFilter[currentQuiz];
+    // //問題の学年_学校_科目が一致するとき
+    // if (filename == currentQuizData.check) {
+    // 次の問題を読み込む
+    loadQuiz();
 
-      showQuiz();
-      //一致しないとき
-    } else {
-      nextQuiz();
-    }
+    showQuiz();
+    //一致しないとき
+    // } else {
+    //   nextQuiz();
+    // }
     // 全ての問題に回答した
   } else {
     alert(checkScore());
@@ -346,19 +365,13 @@ nextQuizBtn.addEventListener('click', event => {
 //スタート
 startQuizBtn.addEventListener('click', event => {
   event.preventDefault();
-  // const currentQuizData = quizDataJp[currentQuiz];
-  //問題の学年学校科目が一致するとき
-  // if (filename == currentQuizData.check) {
-  //   // 次の問題を読み込む
-  //   loadQuiz();
-  //   showQuiz();
-  //   //一致しないとき
-  // } else {
-  //   nextQuiz();
-  // }
-
-  loadQuiz();
-  showQuiz();
+  if (completeFilter.length === 0) {
+    alert(checkScore());
+    window.location = 'test-page.html';
+  } else {
+    loadQuiz();
+    showQuiz();
+  }
 });
 
 
