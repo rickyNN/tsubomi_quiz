@@ -1,27 +1,36 @@
 import { quizDataJp } from './quiz_data_jp.js';
 
-// let quizDataJp = [ {
-//   check: 'index',
+
+// let quizDataJp = [{
+  ///学校名(スペースで複数選択可)
+//   school: 'kamei ryuge',
+　///学年
+//   grade: 'grade1',
+  ///教科(英語:E、数学M、理科SI,社会SS)
+//   subject: 'E',
 //   question: '次の文章の英訳として最も適切なものはどれ？\n私の父は高校で数学を教えています。',
-//   a: 'My father teach math at high school.',
-//   b: 'My father teachs math at high school.',
-//   c: 'My father teaches math at high school.',
-//   d: 'My father teachers math at high school.',
-//   explanation: '主語が三人称単数になる場合、一般動詞の語尾にはsをつけます。\nただしteachなどのように元々の語尾がo, s, ch, sh, xの場合はesをつけます。',
-//   correct: 'c'
-// }]
+//   a: 'a',
+//   b: 'b',
+//   c: 'c',
+//   d: 'd',
+//   explanation: 'a',
+// }];
+
+let schoolFilter = [];
+let gradeFilter = [];
+let completeFilter = [];
+
+shuffleList(quizDataJp);
 
 //ファイル名習得(学校と学年と科目判定)
 const filename = window.location.href.split('/').pop().replace(".html", "");
 
-// const waitBtn = document.getElementById('wait');
-// const Quiz = document.getElementById('quiz');
-// const index = document.getElementById('index');
-// const indevBtn = document.getElementById('wait');
+const Quiz = document.getElementById('quiz');
+const index = document.getElementById('index');
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Quiz.style.display = 'none';
-  // index.style.display = 'block';
+  Quiz.style.display = 'none';
+  index.style.display = 'block';
   let i = 0;
   let ii = 0;
   let j = 0;
@@ -54,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (this.value) {
         const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
         console.log(this.value);
+        schoolFilter = quizDataJp.filter(object => object.school.includes(this.value));
+        console.log(schoolFilter);
         targetSub.style.display = 'inline';
       }
       // ▼3階層目の要素を全て非表示にする
@@ -69,24 +80,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const mainSelect2 = mainBoxes2[ii].getElementsByClassName("subbox1");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
 
-    for (x = 0; x < 6; x++) {
+    for (x = 0; x < mainSelect2.length; x++) {
       mainSelect2[x].onchange = function () {
         // ▼同じ親要素に含まれているすべての3階層目(サブ)要素を消す
         const subBox2 = this.parentNode.getElementsByClassName("subbox2");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
         for (jj = 0; jj < subBox2.length; jj++) {
           subBox2[jj].style.display = 'none';
         }
-
         // ▼指定された3階層目(サブ2)要素だけを表示する
         if (this.value) {
           const targetSub2 = document.getElementById(this.value);   // 「2階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-          console.log(this.value);
           targetSub2.style.display = 'inline';
+          console.log(this.value);
+          gradeFilter = schoolFilter.filter(object => object.grade === this.value);
+          console.log(gradeFilter);
         }
       }
     }
   }
+  // ▼全てのプルダウンメニューセットごとに処理
+  const mainBoxes3 = document.getElementsByClassName('pulldownset');
+  for (ii = 0; ii < mainBoxes3.length; ii++) {
+
+    const mainSelect3 = mainBoxes3[ii].getElementsByClassName("subbox2");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
+
+    for (x = 0; x < mainSelect3.length; x++) {
+      mainSelect3[x].onchange = function () {
+        index.style.display = 'none';
+        Quiz.style.display = 'block';
+        console.log(this.value);
+        completeFilter = gradeFilter.filter(object => object.subject === this.value);
+        console.log(completeFilter);
+        startQuiz();
+      }
+    }
+  }
 });
+
+//////テスト中////////
+
+// function change (){
+//   index.style.display = 'none';
+//   Quiz.style.display = 'block';
+//   console.log(this.value);
+// }
+
+// document.getElementById("kamei1").onchange = change;
+
+
+
+//////テスト終わり//////////////
 
 //問題番号
 const quizNumberElm = document.getElementById('quiznumber');
@@ -98,8 +141,6 @@ const a_text = document.getElementById('a-text');
 const b_text = document.getElementById('b-text');
 const c_text = document.getElementById('c-text');
 const d_text = document.getElementById('d-text');
-
-const container = document.getElementById('quiz-container');
 
 // 送信ボタン
 const submitBtn = document.getElementById('submit');
@@ -134,14 +175,13 @@ const startsElm = document.getElementById('start');
 
 // loadQuiz();
 startQuiz();
-shuffleList(quizDataJp);
 
 function loadQuiz() {
   // 問題を取得
-  const currentQuizData = quizDataJp[currentQuiz];
+  const currentQuizData = completeFilter[currentQuiz];
   //問題を配列化
   const currentArray = [currentQuizData.a, currentQuizData.b, currentQuizData.c, currentQuizData.d];
-　//問題番号を表示
+  //問題番号を表示
   quizNumberElm.innerText = "第" + quiznumber + "問";
   // 質問文を表示
   questionElm.innerText = currentQuizData.question;
@@ -163,7 +203,7 @@ function loadQuiz() {
   d_text.innerText = currentArray[3];
 }
 
-//quizDataJpの順番を並び替える
+//completeFilterの順番を並び替える
 function shuffleList(list) {
   var i = list.length;
   while (--i) {
@@ -245,13 +285,13 @@ submitBtn.addEventListener('click', event => {
   if (answer) {
 
     // 正誤判定
-    if (correct === quizDataJp[currentQuiz].a) {
-      showResults('正解！', quizDataJp[currentQuiz].explanation);
+    if (correct === completeFilter[currentQuiz].a) {
+      showResults('正解！', completeFilter[currentQuiz].explanation);
       quiz++;
       score++;
       console.log(score);
     } else {
-      showResults('残念...', quizDataJp[currentQuiz].explanation);
+      showResults('残念...', completeFilter[currentQuiz].explanation);
       quiz++;
     }
 
@@ -265,23 +305,23 @@ function nextQuiz() {
   currentQuiz++;
 
   // まだ問題が残っている
-  if (currentQuiz < quizDataJp.length) {
-    // 問題を取得
-    const currentQuizData = quizDataJp[currentQuiz];
-    //問題の学年学校科目が一致するとき
-    if (filename == currentQuizData.check) {
-      // 次の問題を読み込む
-      loadQuiz();
+  if (currentQuiz < completeFilter.length) {
+    // // 問題を取得
+    // const currentQuizData = completeFilter[currentQuiz];
+    // //問題の学年_学校_科目が一致するとき
+    // if (filename == currentQuizData.check) {
+    // 次の問題を読み込む
+    loadQuiz();
 
-      showQuiz();
-      //一致しないとき
-    } else {
-      nextQuiz();
-    }
+    showQuiz();
+    //一致しないとき
+    // } else {
+    //   nextQuiz();
+    // }
     // 全ての問題に回答した
   } else {
     alert(checkScore());
-    window.location = 'index.html';
+    window.location = 'test-page.html';
   }
 }
 
@@ -304,18 +344,15 @@ nextQuizBtn.addEventListener('click', event => {
   nextQuiz();
 });
 
+//スタート
 startQuizBtn.addEventListener('click', event => {
   event.preventDefault();
-  const currentQuizData = quizDataJp[currentQuiz];
-  //問題の学年学校科目が一致するとき
-  if (filename == currentQuizData.check) {
-    // 次の問題を読み込む
-    loadQuiz();
-
-    showQuiz();
-    //一致しないとき
+  if (completeFilter.length === 0) {
+    alert(checkScore());
+    window.location = 'test-page.html';
   } else {
-    nextQuiz();
+    loadQuiz();
+    showQuiz();
   }
 });
 
