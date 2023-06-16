@@ -22,9 +22,6 @@ let completeFilter = [];
 
 shuffleList(quizDataJp);
 
-//ファイル名習得(学校と学年と科目判定)
-const filename = window.location.href.split('/').pop().replace(".html", "");
-
 const Quiz = document.getElementById('quiz');
 const index = document.getElementById('index');
 
@@ -117,19 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-//////テスト中////////
-
-// function change (){
-//   index.style.display = 'none';
-//   Quiz.style.display = 'block';
-//   console.log(this.value);
-// }
-
-// document.getElementById("kamei1").onchange = change;
-
-
-
-//////テスト終わり//////////////
 
 //問題番号
 const quizNumberElm = document.getElementById('quiznumber');
