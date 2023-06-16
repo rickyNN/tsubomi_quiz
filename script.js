@@ -2,11 +2,11 @@ import { quizDataJp } from './quiz_data_jp.js';
 
 
 // let quizDataJp = [{
-  ///学校名(スペースで複数選択可)
+///学校名(スペースで複数選択可)
 //   school: 'kamei ryuge',
-　///学年
+///学年
 //   grade: 'grade1',
-  ///教科(英語:E、数学M、理科SI,社会SS)
+///教科(英語:E、数学M、理科SI,社会SS)
 //   subject: 'E',
 //   question: '次の文章の英訳として最も適切なものはどれ？\n私の父は高校で数学を教えています。',
 //   a: 'a',
@@ -235,7 +235,6 @@ function checkScore() {
   } else {
     return quiz + '問中' + score + '問正解\n何度でも挑戦しよう！'
   }
-  // }
 }
 
 function startQuiz() {
@@ -287,25 +286,14 @@ submitBtn.addEventListener('click', event => {
 function nextQuiz() {
   // 問題番号を進める
   currentQuiz++;
-
   // まだ問題が残っている
   if (currentQuiz < completeFilter.length) {
-    // // 問題を取得
-    // const currentQuizData = completeFilter[currentQuiz];
-    // //問題の学年_学校_科目が一致するとき
-    // if (filename == currentQuizData.check) {
     // 次の問題を読み込む
     loadQuiz();
-
     showQuiz();
-    //一致しないとき
-    // } else {
-    //   nextQuiz();
-    // }
-    // 全ての問題に回答した
   } else {
     alert(checkScore());
-    window.location = 'test-page.html';
+    window.location = 'index.html';
   }
 }
 
