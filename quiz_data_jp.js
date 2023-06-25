@@ -2,9 +2,9 @@ const quizDataJp = [{
     // 学校名(スペースで複数選択可)
     school: 'kamei',
     // 学年
-    grade: 'grade3',
+    grade: 'grade1',
     // 教科(英語:E、数学M、理科SI,社会SS)
-    subject: 'M',
+    subject: 'E',
     question: '情報に関する技術によって情報が瞬時にと大量にやりとりされる社会をなんというか',
     a: '情報社会',
     b: 'ネットワーク社会',
@@ -81,8 +81,7 @@ const quizDataJp = [{
     c: 'ハードウェア',
     d: 'ソフトウェア',
     explanation: ' ',
-},
-{
+},{
     // 学校名(スペースで複数選択可)
     school: 'kamei',
     // 学年
@@ -95,8 +94,7 @@ const quizDataJp = [{
     c: 'システム',
     d: 'ソフトウェア',
     explanation: ' ',
-},
-{
+},{
     // 学校名(スペースで複数選択可)
     school: 'kamei',
     // 学年
@@ -109,7 +107,7 @@ const quizDataJp = [{
     c: 'システム',
     d: 'ハードウェア',
     explanation: ' ',
-}, {
+},{
     //   // 学校名(スペースで複数選択可)
     //   school: 'kamei ryuge',
     // // 学年
@@ -122,10 +120,6 @@ const quizDataJp = [{
     //   c: 'c',
     //   d: 'd',
     //   explanation: 'a',
-}
-
-
-
-];
+}];
 
 export { quizDataJp }
