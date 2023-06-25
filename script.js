@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (this.value) {
         const targetSub = document.getElementById(this.value);   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
         console.log(this.value);
-        let schoolFilter = quizDataJp.filter(object => object.school.includes(this.value));
+        schoolFilter = quizDataJp.filter(object => object.school === this.value);
         console.log(schoolFilter);
         targetSub.style.display = 'inline';
       }
